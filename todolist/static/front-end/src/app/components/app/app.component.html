@@ -1,23 +1,24 @@
-<div class='container-fluid'>
-    <div class='row'>
-        <nav class="navbar header-content">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a [routerLink]="['/home']">
-
-                    </a>
-                </div>
-
-            </div>
-        </nav>
+<div class="container-fluid">
+  <div class="row mb-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div></div>
+        <button class="ms-auto me-3 navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <task-search class="search-header" placeholder="Search for a task..."></task-search>
+      </div>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-3 p-0">
+      <nav-menu></nav-menu>
     </div>
-    <div class='row'>
-        <div class='col-sm-3'>
-            <nav-menu></nav-menu>
-        </div>
-        <div class='col-sm-9 body-content'>
-            <router-outlet></router-outlet>
-        </div>
+    <div class="col-12 col-lg-9 body-content">
+      <router-outlet></router-outlet>
     </div>
+  </div>
 </div>
 

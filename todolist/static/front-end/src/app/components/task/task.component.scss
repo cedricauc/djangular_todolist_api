@@ -1,0 +1,5 @@
+.table-task {
+     > :not(caption) > * > * {
+      border: none;
+    }
+}

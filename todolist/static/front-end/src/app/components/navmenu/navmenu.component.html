@@ -1,1 +1,24 @@
-<p>navmenu works!</p>
+<nav id="sidebar" class="main-nav m-0" >
+  <div class="me-3 p-3 d-none d-lg-block bg-light rounded-end">
+    <ul class="nav-pills list-unstyled components">
+      <li class="nav-item mb-2" [routerLinkActive]="['link-active']">
+        <a class="nav-link text-dark p-1" [routerLink]="['/home']"> Todo List</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['link-active']">
+        <a class="nav-link text-dark p-1" [routerLink]="['/task/create']">Create a Task</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-expanded="false">
+    <ul class="nav-pills p-3 list-unstyled components bg-light text-center">
+
+      <li class="nav-item mb-2" [routerLinkActive]="['link-active']">
+        <a class="nav-link text-dark p-1" [routerLink]="['/home']">Todo List</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['link-active']">
+        <a class="nav-link text-dark p-1" [routerLink]="['/task/create']">Create a Task</a>
+      </li>
+    </ul>
+  </div>
+</nav>

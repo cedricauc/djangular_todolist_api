@@ -1,1 +1,109 @@
-<p>task-edit works!</p>
+<div class="task-edit">
+  <h2>{{title}}</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="form-group"
+         [ngClass]="{ 'has-error has-feedback' : hasError('title') }">
+
+      <label for="title">Title:</label>
+      <br/>
+      <input type="text" id="title"
+             formControlName="title" required
+             placeholder="choose a title..."
+             class="form-control"/>
+      <span *ngIf="hasError('title')"
+            class="glyphicon glyphicon-remove form-control-feedback"
+            aria-hidden="true"></span>
+      <div *ngIf="hasError('title')"
+           class="help-block">
+        Title is a required field: please insert a valid title.
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{ 'has-error has-feedback' : hasError('description') }">
+
+      <label for="description">Description:</label>
+      <br/>
+      <input type="text" id="description"
+             formControlName="description"
+             placeholder="enter a description..."
+             class="form-control"/>
+      <span *ngIf="hasError('description')"
+            class="glyphicon glyphicon-remove form-control-feedback"
+            aria-hidden="true"></span>
+      <div *ngIf="hasError('description')"
+           class="help-block">
+        Title is a required field: please insert a valid title.
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{ 'has-error has-feedback' : hasError('address') }">
+
+      <label for="address">Recipient:</label>
+      <br/>
+      <input type="text" id="address"
+             formControlName="address"
+             placeholder="enter a address..."
+             class="form-control"/>
+      <span *ngIf="hasError('address')"
+            class="glyphicon glyphicon-remove form-control-feedback"
+            aria-hidden="true"></span>
+      <div *ngIf="hasError('address')"
+           class="help-block">
+        Title is a required field: please insert a valid title.
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{ 'has-error has-feedback' : hasError('item') }">
+
+      <label for="item">Item:</label>
+      <br/>
+      <input type="text" id="item"
+             formControlName="item" required
+             placeholder="choose a item..."
+             class="form-control"/>
+      <span *ngIf="hasError('item')"
+            class="glyphicon glyphicon-remove form-control-feedback"
+            aria-hidden="true"></span>
+      <div *ngIf="hasError('item')"
+           class="help-block">
+        Title is a required field: please insert a valid title.
+      </div>
+    </div>
+
+    <div *ngIf="editMode" class="form-check"
+         [ngClass]="{ 'has-error has-feedback' : hasError('complete') }">
+      <label for="complete">Done:</label>
+
+          <input type="checkbox" id="complete"
+                   formControlName="complete"
+                   class="form-check-input"/>
+
+      <br/>
+
+    </div>
+
+    <div class="form-group commands mt-3">
+      <button *ngIf="editMode" type="submit"
+              [disabled]="form.invalid"
+              class="btn btn-success">
+        Apply changes
+      </button>
+      <button *ngIf="!editMode" type="submit"
+              [disabled]="form.invalid"
+              class="btn btn-success">
+        Create a task !
+      </button>
+      <button *ngIf="!editMode" type="submit"
+              (click)="onBack()"
+              class="btn btn-default">
+        Cancel
+      </button>
+    </div>
+
+  </form>
+
+</div>

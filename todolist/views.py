@@ -12,5 +12,9 @@ class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
 
 
-def home(request):
-    return render(request, "angular_index.html", {})
+def app(request, id=None):
+    return render(request, "index.html", {})
+
+
+def error_404_view(request, exception):
+    return render(request, 'index.html', {})

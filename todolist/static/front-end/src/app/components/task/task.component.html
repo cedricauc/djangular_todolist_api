@@ -1,1 +1,32 @@
-<p>task works!</p>
+<div class="p-3 bg-body rounded shadow-sm">
+  <h5 class="border-bottom pb-2 mb-0">{{task.title}}
+    <span *ngIf="task.complete">
+      <i class="fa fa-check text-success"></i>
+    </span>
+  </h5>
+  <div class=" d-flex text-muted pt-3">
+
+    <p class="col-12 pb-3 mb-0 small lh-sm border-bottom">
+      <strong class="d-block text-gray-dark">Description</strong>
+      {{task.description}}
+    </p>
+  </div>
+  <div class=" d-flex text-muted pt-3">
+
+    <p class="col-12 pb-3 mb-0 small lh-sm border-bottom">
+      <strong class="d-block text-gray-dark">Address</strong>
+      {{task.address}}
+    </p>
+  </div>
+  <div class=" d-flex text-muted pt-3">
+
+    <p class="col-12 pb-3 mb-0 small lh-sm border-bottom">
+      <strong class="d-block text-gray-dark">Item</strong>
+      {{task.item}}
+    </p>
+  </div>
+  <small class="d-block text-end mt-3">
+
+  </small>
+</div>
+

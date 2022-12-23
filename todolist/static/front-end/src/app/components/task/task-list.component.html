@@ -1,1 +1,27 @@
-<p>task-list works!</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Item</th>
+      <th scope="col">Complete</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{task.title}}</td>
+      <td>{{task.item}}</td>
+      <td *ngIf="task.complete"><i class="fa fa-check text-success"></i></td>
+      <td *ngIf="!task.complete"></td>
+      <td>
+        <a class="me-3" (click)="onSelect(task)" style="cursor: pointer"><i class="fa fa-eye text-info" aria-hidden="true"></i></a>
+        <a class="me-3" (click)="onEdit(task)" style="cursor: pointer"><i class="fa fa-pencil text-warning" aria-hidden="true"></i></a>
+        <a class="me-3" (click)="onDelete(task)" style="cursor: pointer"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

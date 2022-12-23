@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.co
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     TaskListComponent,
     TaskSearchComponent,
     NavmenuComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 export class AppModule { }
 
 export function getBaseUrl() {
+    //return 'http://localhost:8000/'
     return document.getElementsByTagName('base')[0].href;
 }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'task-search',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-search.component.scss']
 })
 export class TaskSearchComponent {
-
+    @Input() class: string | undefined;
+    @Input() placeholder: string | undefined;
 }
