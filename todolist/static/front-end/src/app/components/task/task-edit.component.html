@@ -26,7 +26,7 @@
       <label for="description">Description:</label>
       <br/>
       <input type="text" id="description"
-             formControlName="description"
+             formControlName="description" required
              placeholder="enter a description..."
              class="form-control"/>
       <span *ngIf="hasError('description')"
@@ -34,7 +34,7 @@
             aria-hidden="true"></span>
       <div *ngIf="hasError('description')"
            class="help-block">
-        Title is a required field: please insert a valid title.
+        Description is a required field: please insert a valid description.
       </div>
     </div>
 
@@ -44,7 +44,7 @@
       <label for="address">Recipient:</label>
       <br/>
       <input type="text" id="address"
-             formControlName="address"
+             formControlName="address" required
              placeholder="enter a address..."
              class="form-control"/>
       <span *ngIf="hasError('address')"
@@ -52,7 +52,7 @@
             aria-hidden="true"></span>
       <div *ngIf="hasError('address')"
            class="help-block">
-        Title is a required field: please insert a valid title.
+        Recipient is a required field: please insert a valid recipient.
       </div>
     </div>
 
@@ -70,7 +70,7 @@
             aria-hidden="true"></span>
       <div *ngIf="hasError('item')"
            class="help-block">
-        Title is a required field: please insert a valid title.
+        Item is a required field: please insert a valid item.
       </div>
     </div>
 

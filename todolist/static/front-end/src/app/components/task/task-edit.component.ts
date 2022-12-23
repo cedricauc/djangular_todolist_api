@@ -45,9 +45,9 @@ export class TaskEditComponent {
   createForm() {
       this.form = this.fb.group({
             title: ['', Validators.required],
-            description: '',
-            address: '',
-            item: '',
+            description: ['', Validators.required],
+            address: ['', Validators.required],
+            item: ['', Validators.required],
             complete: false
       });
   }
