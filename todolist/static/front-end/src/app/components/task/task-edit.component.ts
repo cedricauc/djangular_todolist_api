@@ -25,7 +25,7 @@ export class TaskEditComponent {
 
         this.createForm();
 
-        const id = +this.activatedRoute.snapshot.params["id"];
+        const id = Number(this.activatedRoute.snapshot.params["id"]);
 
         if(id) {
           this.editMode = true;

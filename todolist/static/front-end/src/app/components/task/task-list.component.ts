@@ -9,7 +9,6 @@ import {Router} from "@angular/router";
   styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent implements OnInit {
-  @Input() class!: string;
   title!: string;
   selectedTask!: Task;
   tasks!: Task[];
@@ -20,7 +19,6 @@ export class TaskListComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("TaskListComponent " + " instantiated with the following class: " + this.class);
     const url = this.baseUrl + "api/v1/task/";
     this.http.get<Task[]>(url).subscribe(result => {
       this.tasks = result;
